@@ -7,11 +7,11 @@ public class Employee {
 		private String employeeName;
 		private String employeeAddress;
 		private long employeePhone;
-		private double basicSalary;      /*PROTECTED TO ALLOW CHILD CLASSES TO BE MODIFY*/
-		private double specialAllowance = 250.80;     
-		private double hra = 1000.50;                 	
+		protected double basicSalary;      /*PROTECTED TO ALLOW CHILD CLASSES TO BE BE ABLE TO SEE THIS VARIABLE*/
+		private double specialAllowance = 250.80;     /*DEFAULT VALUES GIVEN*/
+		private double hra = 1000.50;                 /*DEFAULT VALUES GIVEN*/
 		
-//	OVERLOADED CONSTRUCTOR FOR EMPLOYEE
+//	OVERLOADED CONSTRUCTORS FOR EMPLOYEE
 		public Employee(long Id, String Name, String Address, long Phone) {
 			this.employeeId = Id;
 			this.employeeName = Name;
@@ -25,14 +25,19 @@ public class Employee {
 			System.out.println(newSalary);
 		}
 		
-//		
-//	    public double calculateSalary() {
-//	        double newSalary = this.basicSalary + ( this.basicSalary * this.specialAllowance/100) + (this.basicSalary * this.hra/100);
-//	            return newSalary;
-//	    }
-//	
-	
-	
+//	(DEFAULT METHOD) CALCULATE TRANSPORT ALLOWANCE METHOD (METHOD OVERRIDING TAKES PLACE IN MANAGER CLASS)
+		public void calculateTransportAllowance() {
+			double transportAllowance = (basicSalary * .1);
+			System.out.println(transportAllowance);
+		}
+		
+		
+		
+		
+		
+		
+		
+//	I ADDED SETTERS AND GETTERS FOR TESTING PURPOSES DURING BUILDING THIS CLASS
 	public long getEmployeeId() {
 		return employeeId;
 	}

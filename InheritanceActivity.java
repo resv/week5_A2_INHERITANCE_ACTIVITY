@@ -11,19 +11,31 @@ public class InheritanceActivity {
 //	PRINTING OUT REFERENCE MESSAGE FOR MANAGER'S CALCULATESALARY METHOD THEN EXECUTES
 		System.out.printf("The salary for the manager is : $ ");
 		manager1.calculateSalary();
-
+		System.out.printf("The transport allowance for manager1, named " + manager1.getEmployeeName() + " is : $ ");
+		manager1.calculateTransportAllowance();
+		
+		
+		
+		
+		
 		
 //	SPACING FOR RESULTS
 		System.out.println();
+		
+		
+		
+		
+		
 		
 
 //	CREATING CONSTRUCTOR FOR TRAINEE
 		Trainee trainee1 = new Trainee(29846, "Jack", "Mumbai India", 442085, 45000);
 		
-//	PRINTING OUT REFERENCE MESSAGE FOR TRAINEE'S CALCULATESALARY METHOD THEN EXECUTES
+//	PRINTING OUT REFERENCE MESSAGE FOR TRAINEE'S CALCULATE SALARY & TRANSPORT ALLOWANCE METHOD THEN EXECUTES
 		System.out.printf("The salary for the trainee is : $ ");
 		trainee1.calculateSalary();
-				
+		System.out.printf("The transport allowance for trainee1, named " + trainee1.getEmployeeName() + " is : $ ");
+		trainee1.calculateTransportAllowance();
 	}
 }
 
